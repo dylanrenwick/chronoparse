@@ -1,4 +1,4 @@
-# `chronoparse` [![npm version](https://badge.fury.io/js/chronoparse.svg)](https://badge.fury.io/js/chronoparse)
+# `chronoparse` [![npm version](https://badge.fury.io/js/chronoparse.svg)](https://badge.fury.io/js/chronoparse)[![Build Status](https://travis-ci.com/dylanrenwick/chronoparse.svg?branch=master)](https://travis-ci.com/dylanrenwick/chronoparse)[![Coverage Status](https://coveralls.io/repos/github/dylanrenwick/chronoparse/badge.svg?branch=master)](https://coveralls.io/github/dylanrenwick/chronoparse?branch=master)
 
 chronoparse is a simple nodejs module designed for parsing user-input timespan strings.  
 Currently it supports the format:
