@@ -7,14 +7,14 @@ Currently it supports the format:
 ```
 Where `<quantity>` is a non-negative integer, and `<timespan>` is one of the following:
 ```
-second, seconds, s
-minute, minutes, m
-hour, hours, h
-day, days, d
-week, weeks, w
-month, months
-year, years, y
-decade, decades
+second, seconds, s - 1 second
+minute, minutes, m - 60 seconds
+hour, hours, h - 60 minutes
+day, days, d - 24 hours
+week, weeks, w - 7 days
+month, months - 30 days
+year, years, y - 365 days
+decade, decades - 10 years
 ```
 
 chronoparse parses the given string, and returns an object using the following schema:
