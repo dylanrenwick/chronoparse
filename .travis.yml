@@ -3,6 +3,6 @@ cache: npm
 matrix:
   include:
   - name: "Unit tests"
-    node_js: "10.15.3"
+    node_js: "12.13.0"
     env: JOB=test
 script: npm run $JOB
