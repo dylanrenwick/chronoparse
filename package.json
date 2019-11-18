@@ -4,7 +4,7 @@
   "description": "Simple timespan string parser",
   "main": "index.js",
   "scripts": {
-    "test": "mocha"
+    "test": "nyc mocha && nyc report --reporter=text-lcov | coveralls"
   },
   "repository": {
     "type": "git",
