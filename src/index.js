@@ -22,7 +22,6 @@ const regex = new RegExp("^(\\d+) ?([a-zA-Z]+)");
 
 function matchToTimespan(match) {
     let quantity = parseInt(match[1]);
-    if (Number.isNaN(quantity)) return -1;
     let type = match[2].toLowerCase();
     let typeIndex = timeStrings.indexOf(type);
     if (typeIndex === -1 && type.length === 1) typeIndex = timeStrings.map(x => x[0]).indexOf(type);
