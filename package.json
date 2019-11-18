@@ -23,6 +23,9 @@
   "homepage": "https://github.com/dylanrenwick/chronoparse#readme",
   "devDependencies": {
     "chai": "^4.2.0",
-    "mocha": "^6.2.2"
+    "coveralls": "^3.0.7",
+    "mocha": "^6.2.2",
+    "nyc": "^14.1.1",
+    "timezone-mock": "^1.0.8"
   }
 }
