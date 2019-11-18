@@ -1,3 +1,4 @@
+const tzMock = require("timezone-mock");
 const chai = require("chai");
 const expect = chai.expect;
 
@@ -102,5 +103,14 @@ describe("parse", function() {
     it ("should correctly parse case insensitively", function() {
         let result = 29
         expect(parse("29 sEconDS", {max: 2}).totalSeconds).to.equal(result);
+    });
+
+    it ("should correctly provide the current timezone", function() {
+        tzMock.register("US/Eastern");
+        expect(parse("1 second").timezone).to.equal("UTC-5");
+        tzMock.register("US/Pacific");
+        expect(parse("1 second").timezone).to.equal("UTC-8");
+        tzMock.register("UTC");
+        expect(parse("1 second").timezone).to.equal("UTC+0");
     });
 });
