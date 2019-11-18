@@ -1,0 +1,28 @@
+{
+  "name": "chronoparse",
+  "version": "1.0.0",
+  "description": "Simple timespan string parser",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dylanrenwick/chronoparse.git"
+  },
+  "keywords": [
+    "time",
+    "parse",
+    "string"
+  ],
+  "author": "Dylan Renwick",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dylanrenwick/chronoparse/issues"
+  },
+  "homepage": "https://github.com/dylanrenwick/chronoparse#readme",
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^6.2.2"
+  }
+}
