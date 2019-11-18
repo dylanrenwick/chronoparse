@@ -49,8 +49,8 @@ console.log(result2.totalSeconds);
 The options object may contain any or all of the following options:
 ```js
 {
-    delimiter, // a string to use to separate multiple timespans
-    max // a non-negative integer specifying the maximum number of timespans to parse in the string
+    delimiter, // a string to use to separate multiple timespans, defaults to whitespace
+    max // a non-negative integer specifying the maximum number of timespans to parse in the string, defaults to no limit
 }
 ```
 
@@ -82,6 +82,8 @@ let result = chronoparse("1 hour, 2 minutes, 3 is the coolest number", { delimit
 console.log(result.totalSeconds);
 // expected output: 3720
 ```
+
+**NOTE:** The default value of `max` is `-1`. This is interpreted as "no limit".
 
 ## License and Usage
 
