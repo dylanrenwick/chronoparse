@@ -21,7 +21,7 @@ chronoparse parses the given string, and returns an object using the following s
 ```js
 {
     totalSeconds, // an integer representing the total length of the timespan in seconds
-    startDate, // the current datetime as of parsing completion
+    startDate, // the given startDate in the options object
     endDate, // a datetime totalSeconds from startDate
     timezone, // the current local timezone, specified as "UTC+/-X" where X is the offset in hours
     parts // an array of each timespan string parsed
@@ -50,6 +50,7 @@ The options object may contain any or all of the following options:
 ```js
 {
     delimiter, // a string to use to separate multiple timespans, defaults to whitespace
+    startDate, // a Date object specifying when to calculate datetimes from, defaults to now
     max // a non-negative integer specifying the maximum number of timespans to parse in the string, defaults to no limit
 }
 ```

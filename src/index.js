@@ -73,9 +73,9 @@ module.exports = function parse(text, options = {}) {
         outputData.parts += res[0];
     }
 
-    let date = new Date();
+    let date = options.startDate || new Date();
     date.setSeconds(date.getSeconds() + outputData.totalSeconds);
-    outputData.startDate = new Date();
+    outputData.startDate = options.startDate || new Date();
     outputData.endDate = date;
     outputData.timezone = getTimezone();
 

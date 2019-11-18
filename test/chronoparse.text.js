@@ -113,4 +113,26 @@ describe("parse", function() {
         tzMock.register("UTC");
         expect(parse("1 second").timezone).to.equal("UTC+0");
     });
+
+    it ("should return the date of completion as the startDate", function() {
+        let now = new Date();
+        let result = parse("29 seconds").startDate;
+        // Will fail if parsing takes more than 60 seconds
+        expect(result - now).to.be.lessThan(60000);
+    });
+
+    it ("should return an endDate that matches the given timespan", function() {
+        let result = parse("29 seconds");
+        expect(result.endDate - result.startDate).to.equal(29000);
+    });
+
+    it ("should support specifying a different startDate", function() {
+        let date = new Date();
+        date.setSeconds(date.getSeconds() + 120);
+        let endDate = new Date();
+        endDate.setSeconds(endDate.getSeconds() + 149);
+        let result = parse("29 seconds", {startDate: date});
+        expect(result.startDate.toString()).to.equal(date.toString());
+        expect(result.endDate.toString()).to.equal(endDate.toString());
+    });
 });
